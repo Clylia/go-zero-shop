@@ -1,0 +1,32 @@
+syntax = "v1"
+
+info(
+	title: "用户api"
+	desc: "用户api"
+	author: "leo"
+	email: "962055298@qq.com"
+	version: "v1"
+)
+
+type UserInfo {
+    Id         uint64 `json:"id"`          //用户ID
+    Username   string `json:"username"`    //用户名
+    Password   string `json:"password"`    //用户密码
+    Phone      string `json:"phone"`       //手机号
+    CreateTime int64  `json:"create_time"` //创建时间
+    UpdateTime int64  `json:"update_time"` //更新时间
+}
+
+//用户登陆请求
+type LoginReq {
+	Username string `json:"username"`
+	Password string `json:"password"`
+}
+
+//用户登陆响应
+type LoginResp {
+	AccessToken  string `json:"accessToken"`
+	AccessExpire int64  `json:"accessExpire"`
+}
+
+

@@ -1,0 +1,16 @@
+syntax = "v1"
+
+import (
+	"apis/user.api"
+)
+
+//no need login
+@server(
+	prefix: v1/user
+	group: user
+)
+service api-api {
+	@doc "login"
+	@handler login
+	post /login (LoginReq) returns (LoginResp)
+}

@@ -1,0 +1,22 @@
+syntax = "v1"
+
+info(
+	title: "banner api"
+	desc: "banner api"
+	author: "leo"
+	email: "962055298@qq.com"
+	version: "v1"
+)
+
+type Banner {
+		ID   int64  `json:"id"`
+		Name string `json:"name"` // 名称
+		URL  string `json:"url"`  // 图片地址
+}
+
+type HomeBannerResponse {
+		Banners []*Banner `json:"banners"`
+}
+
+
+

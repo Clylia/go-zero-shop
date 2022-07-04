@@ -1,0 +1,11 @@
+Name: api-api
+Host: 0.0.0.0
+Port: 8000
+
+JwtAuth:
+  AccessSecret: uOvKLmVfztaXGpNYd4Z0I1SiT7MweJhl
+  AccessExpire: 86400
+
+
+UserRPC:
+    Target: k8s://go-zero-shop/user-rpc-svc:9001
